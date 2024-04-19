@@ -31,7 +31,7 @@ font_small = pygame.font.SysFont("Verdana", 20)
 game_over = font.render("Game Over", True, BLACK)
 
 # Загрузка фонового изображения
-background = pygame.image.load("AnimatedStreet.png")
+background = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\AnimatedStreet.jpg")
 
 # Создание белого экрана
 DISPLAYSURF = pygame.display.set_mode((400, 600))
@@ -42,7 +42,7 @@ pygame.display.set_caption("Game")
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("Enemy.png")
+        self.image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\Enemy.png")
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)  
 
@@ -58,7 +58,7 @@ class Enemy(pygame.sprite.Sprite):
 class Coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("coin.png")
+        self.image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\coin.png")
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)  
 
@@ -73,7 +73,7 @@ class Coin(pygame.sprite.Sprite):
 class Blackcoin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("difcoin.webp")
+        self.image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\difcoin.webp")
         self.image = pygame.transform.scale(self.image, (40, 40))
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 20), 0)  
@@ -89,7 +89,7 @@ class Blackcoin(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("Player.png")
+        self.image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\Player.png")
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
         
@@ -154,7 +154,7 @@ while True:
 
     # Обработка коллизий между игроком и врагами
     if pygame.sprite.spritecollideany(P1, enemies):
-        pygame.mixer.Sound('crash.wav').play()
+        pygame.mixer.Sound(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\crash.wav').play()
         time.sleep(0.5)
                     
         DISPLAYSURF.fill(RED)
@@ -170,7 +170,7 @@ while True:
     # Коллизия с монетой
     coin_add.add(Coin1)
     if pygame.sprite.spritecollideany(P1, coin_add):
-        pygame.mixer.Sound('coin.wav').play()
+        pygame.mixer.Sound(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\coin.wav').play()
         for entity in coin_add:
             entity.kill() 
             SCORE += 2
@@ -179,7 +179,7 @@ while True:
     # Коллизия с монетой 2
     blackcoin_add.add(Coin2)
     if pygame.sprite.spritecollideany(P1, blackcoin_add):
-        pygame.mixer.Sound('coin.wav').play()
+        pygame.mixer.Sound(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex1\coin.wav').play()
         for entity in blackcoin_add:
             entity.kill() 
             SCORE += 5

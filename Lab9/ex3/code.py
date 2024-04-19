@@ -15,7 +15,7 @@ BLACK = (0, 0, 0)
 colors = [RED, GREEN, BLUE]
 color = WHITE
 
-eraser = pygame.image.load('eraser.png')
+eraser = pygame.image.load(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab9\ex3\eraser.png')
 eraser = pygame.transform.scale(eraser, (70, 70))
 
 def draw_rect(index):

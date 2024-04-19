@@ -24,18 +24,18 @@ score_font = pygame.font.SysFont("Verdana", 20)
 SURF = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Street Racer")
 
-wasted = pygame.image.load('over.jpg')
+wasted = pygame.image.load(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex1\over.jpg')
 wasted = pygame.transform.scale(wasted, (400, 600))
 
-bg = pygame.image.load("AnimatedStreet.png")
+bg = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex1\AnimatedStreet.jpg")
 
-pygame.mixer.music.load('background.wav')
+pygame.mixer.music.load(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex1\background.wav')
 pygame.mixer.music.play(-1)
 
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("Enemy.png")
+        self.image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex1\Enemy.png")
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)
 
@@ -52,7 +52,7 @@ class Enemy(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("Player.png")
+        self.image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex1\Player.png")
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
 
@@ -72,7 +72,7 @@ class Player(pygame.sprite.Sprite):
 class Coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("coin.png")
+        self.image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex1\coin.png")
         self.image = pygame.transform.scale(self.image, (25, 25))
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)
@@ -109,7 +109,7 @@ while True:
     
 
     if pygame.sprite.spritecollideany(P1, enemies): 
-        pygame.mixer.music.load('crash.wav')
+        pygame.mixer.music.load(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex1\crash.wav')
         pygame.mixer.music.play()
 
         SURF.blit(wasted, (0, 0))

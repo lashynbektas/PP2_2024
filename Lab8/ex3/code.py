@@ -15,7 +15,7 @@ BLACK = (0, 0, 0)
 colors = [RED, GREEN, BLUE]  # Список доступных цветов
 color = WHITE  # Изначальный цвет - белый
 
-eraser = pygame.image.load('eraser.png')  # Загрузка изображения ластика
+eraser = pygame.image.load(r'C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab8\ex3\eraser.png')  # Загрузка изображения ластика
 eraser = pygame.transform.scale(eraser, (70, 70))  # Изменение размера изображения
 eraser_rect = eraser.get_rect(topleft=(1010, 0))  # Задание прямоугольной области для ластика
 

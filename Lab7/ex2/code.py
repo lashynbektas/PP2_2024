@@ -8,12 +8,12 @@ screen = pygame.display.set_mode((400,300))
 pygame.display.set_caption("Music Player")
 
 
-image = pygame.image.load('mus.jpeg')
+image = pygame.image.load(r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab7\ex2\mus.jpeg")
 image = pygame.transform.scale(image, (400, 300))
 
 
-music = ["Brent Faiyaz - Best Time.mp3", "Childish Gambino - 3005.mp3",
-         "Frank Ocean - Lost.mp3", "wave to earth - love.mp3", "KISS OF LIFE - Nobody Knows.mp3", "Madison Beer - Home To Another One.mp3"]
+music = [r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab7\ex2\Brent Faiyaz - Best Time.mp3", r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab7\ex2\Childish Gambino - 3005.mp3",
+         r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab7\ex2\Frank Ocean - Lost.mp3", r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab7\ex2\wave to earth - love.mp3", r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab7\ex2\KISS OF LIFE - Nobody Knows.mp3", r"C:\Users\Айтас Култасов\Desktop\pp2\Practice\Lab7\ex2\Madison Beer - Home To Another One.mp3"]
 
 
 current_music = 0
